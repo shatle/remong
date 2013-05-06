@@ -1,18 +1,6 @@
 # coding: utf-8
 
-require 'mongoid'
-Mongoid.load!(File.dirname(__FILE__)+'/mongoid.yml', :test)
-require 'remong'
-
-class Article
-	include Mongoid::Document
-  include Mongoid::Rid
-
-	field :title, :type => String
-	field :content, :type => String 
-	field :tags, :type => String 
-
-end
+require 'spec_helper'
 
 describe Article do 
   after(:each) do 
